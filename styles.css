@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+}
+
+
+.loader {
+    width: 100%;
+    margin: 300px;
+    
+}
+
+.loader span {
+    position: relative;
+    font-size: 4em;
+    color: #00aeff;
+    animation: animate 2s ease-in-out infinite;
+    display: inline-block;
+    animation-delay: calc(0.1s * var(--z));
+}
+
+
+@keyframes animate {
+    0%, 40%, 100% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-50px);
+        filter: drop-shadow(0 0 20px #11b4ff);
+        box-shadow: 0 30px 0 #11b4ff, 0 -30px 0 #11b4ff;
+
+    }
+}
